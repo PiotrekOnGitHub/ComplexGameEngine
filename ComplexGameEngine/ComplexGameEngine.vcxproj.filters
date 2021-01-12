@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ComplexEngine">
+      <UniqueIdentifier>{D3E03212-3FA1-AE48-08DC-F7C5745BF324}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ComplexEngine.h" />
+    <ClInclude Include="src\ComplexEngine\Application.h">
+      <Filter>ComplexEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ComplexEngine\Core.h">
+      <Filter>ComplexEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ComplexEngine\Entrypoint.h">
+      <Filter>ComplexEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ComplexEngine\Log.h">
+      <Filter>ComplexEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ComplexEngine\Application.cpp">
+      <Filter>ComplexEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ComplexEngine\Entrypoint.cpp">
+      <Filter>ComplexEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ComplexEngine\Log.cpp">
+      <Filter>ComplexEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+[submodule "ComplexGameEngine/libs/spdlog"]
+	path = ComplexGameEngine/libs/spdlog
+	url = https://github.com/gabime/spdlog
