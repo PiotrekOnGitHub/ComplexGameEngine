@@ -1,3 +1,6 @@
 [submodule "ComplexGameEngine/libs/spdlog"]
 	path = ComplexGameEngine/libs/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "ComplexGameEngine/libs/GLFW"]
+	path = ComplexGameEngine/libs/GLFW
+	url = https://github.com/TheCherno/glfw

@@ -1,13 +1,17 @@
 workspace "ComplexGameEngine"
 	architecture "x64"
-	configurations
-	{
+	configurations {
 		"Debug",
 		"Release",
 		"Dist"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "ComplexGameEngine/libs/GLFW"
+
+include "ComplexGameEngine/libs/GLFW"
 
 project "ComplexGameEngine"
 	location "ComplexGameEngine"
@@ -17,12 +21,22 @@ project "ComplexGameEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "cmlpkg.h"
+	pchsource "ComplexGameEngine/src/cmlpkg.cpp"
+
 	files {
 		"%{prj.name}/src/**.h", 
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	includedirs {
+		"%{prj.name}/src", 
 		"%{prj.name}/libs/spdlog/include"
 	}
 
